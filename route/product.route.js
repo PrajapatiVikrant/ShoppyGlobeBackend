@@ -1,15 +1,15 @@
 import { Router } from "express";
-import JWTverify from "../middleware/JWTverify";
+import JWTverify from "../middleware/JWTverify.js";
 
 const router = Router();
 
-router.use(JWTverify());
+router.use(JWTverify);
 
 
 //send all products
-router.get(('/',(req,res)=>{
+router.get('/',(req,res)=>{
 
-}))
+})
 
 
 //send specific product with given id
