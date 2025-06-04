@@ -4,7 +4,7 @@ import product from "../controller/product.controller.js"
 
 const router = Router();
 
-router.use(JWTverify);
+
 
 
 //send all products
@@ -15,15 +15,15 @@ router.get('/',product.read)
 router.get('/:id',product.readOne)
 
 //create a new products
-router.post('/',product.create)
+router.post('/',JWTverify,product.create)
 
 
 //update product with given id
-router.put('/:id',product.update)
+router.put('/:id',JWTverify,product.update)
 
 
 //delete product with given id
-router.delete('/:id', product.delete)
+router.delete('/:id',JWTverify, product.delete)
 
 
 
