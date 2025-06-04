@@ -1,33 +1,23 @@
 import mongoose, { mongo } from "mongoose";
 
 const cartSchema = new mongoose.Schema({
-    id: {
+    //foreign key from product collection
+    product_id: {
         type: mongoose.Schema.ObjectId,
         ref: "shoppyglobe_productSchema",
-        require: true
+        required: true
     },
-    user:{
-        id:{
-            type:mongoose.Schema.ObjectId,
-            ref:"shoppyglobe_userSchema",
-            require:true
-        },
-        email:{
-            type:String,
-            require:true
-        }
-    },
-    image: {
-        type: String,
-        default: "",
+    email:{
+        type:String,
+        required:true
     },
     name: {
         type: String,
-        require: true
+        required: true
     },
     brand:{
         type:String,
-        require:true
+        required:true
     },
     category: {
         type: String,
@@ -36,8 +26,12 @@ const cartSchema = new mongoose.Schema({
     },
     qty: {
         type: Number,
-        require: true
+        required: true
     },
+    price:{
+        type:String,
+        required:true
+    }
 
 })
 const cartModel = mongoose.model("shoppyglobe_cartSchema",cartSchema);

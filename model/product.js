@@ -3,28 +3,28 @@ import mongoose from "mongoose";
 const productSchema = new mongoose.Schema({
     brand:{
         type:String,
-        require:true
+        required:true
     },
-     category: {
+    category: {
         type: String,
         required: true,
         enum: ["furniture", "beauty", "fragrance", "groceries"],
     },
     name:{
         type:String,
-        require:true
+        required:true
     },
     description:{
         type:String,
-        require:true
+        required:true
     },
     offer:{
         type:String,
-        require:true
+        required:true
     },
     price:{
         type:String,
-        require:true
+        required:true
     }
 })
 

@@ -1,5 +1,6 @@
 import { Router } from "express";
 import JWTverify from "../middleware/JWTverify.js";
+import product from "../controller/product.controller.js"
 
 const router = Router();
 
@@ -7,32 +8,22 @@ router.use(JWTverify);
 
 
 //send all products
-router.get('/',(req,res)=>{
-
-})
+router.get('/',product.read)
 
 
 //send specific product with given id
-router.get('/:id',(req,res)=>{
-
-})
+router.get('/:id',product.readOne)
 
 //create a new products
-router.post('/',(req,res)=>{
-
-})
+router.post('/',product.create)
 
 
 //update product with given id
-router.put('/:id',(req,res)=>{
-
-})
+router.put('/:id',product.update)
 
 
 //delete product with given id
-router.delete('/:id', (req,res)=>{
-
-})
+router.delete('/:id', product.delete)
 
 
 
