@@ -1,7 +1,8 @@
 # Shoppyglobe backend
 
 ## Introduct
- build a restfull api for my shoppyglobe application
+ This is the **backend API** for the ShoppyGlobe e-commerce application.  
+It provides secure and efficient RESTful APIs for user authentication, product management, and cart operations using **Node.js**, **Express.js**, and **MongoDB**.
 
 ## Github Repository link
 https://github.com/PrajapatiVikrant/ShoppyGlobeBackend
